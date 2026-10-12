@@ -1,0 +1,8 @@
+method,N,n_factors,profile,block_size,estimated_risk,ci_low,ci_high,correct_guess,covariate_difference,source,iterations,below_risk_0_10_by_upper_bound,exact_risk,risk_for_planning,planning_risk_source,pareto_candidate_point_estimates
+simple,30,2,balanced,0,0.5846,0.5708809270754663,0.5981891777554301,0.5,0.4193641129456535,new Monte Carlo simulation,5000,False,0.5846647117286918,0.5846647117286918,exact,True
+fixed_block,30,2,balanced,4,0.0,0.0,0.0007677019450571244,0.7003977777777779,0.4112197619047619,new Monte Carlo simulation,5000,True,0.0,0.0,exact,True
+varying_block,30,2,balanced,4,0.0,0.0,0.0007677019450571244,0.6988270000000001,0.4129111904761905,new Monte Carlo simulation,5000,True,0.0,0.0,exact,True
+minimization,30,2,balanced,0,0.0546,0.048637586499460476,0.061246282393196426,0.7186820000000004,0.1643614372005703,new Monte Carlo simulation,5000,True,,0.0546,new Monte Carlo simulation,True
+stratified,30,2,balanced,4,0.0864,0.07892653932325946,0.0945085037256918,0.6835833333333334,0.13723581160669396,new Monte Carlo simulation,5000,True,,0.0864,new Monte Carlo simulation,True
+biased_coin,30,2,balanced,0,0.1244,0.11553931594799564,0.13383738175313126,0.6192377777777777,0.4194713355804841,new Monte Carlo simulation,5000,False,0.12100147687726709,0.12100147687726709,exact,False
+big_stick,30,2,balanced,0,0.0,0.0,0.0007677019450571244,0.6161166666666666,0.41682690476190476,new Monte Carlo simulation,5000,True,0.0,0.0,exact,True

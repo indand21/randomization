@@ -1,0 +1,13 @@
+# Preserve exact bytes used by the recorded source and input fingerprints.
+*.py -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.csv -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol
+*.joblib binary
+*.npz binary
+*.png binary
+*.pdf binary
+*.ipynb text eol=lf
+*.md text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+requirements.txt text eol=lf

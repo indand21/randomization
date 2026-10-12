@@ -1,0 +1,46 @@
+# Python, Jupyter and local environments
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+.env.*
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Document and submission packages
+*.doc
+*.docx
+*.docm
+*.odt
+*.rtf
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.enl
+*.zip
+/*.pdf
+latex/
+authoring/
+*Manuscript*/
+*manuscript*/
+*Submission*/
+*submission*/
+*Cover_Letter*
+build_documents.py
+package_project.py
+results/manuscript_sources.json
+results/mathematical_expressions.json
+results/reference_sources.json
+results/*_checkpoint.csv
+# Document renders and incidental local QA files
+qa/*
+!qa/validation_report.json
+!qa/artifact_hashes.json

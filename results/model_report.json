@@ -1,0 +1,235 @@
+{
+  "model_source_sha256": "7d75887e39bb6f67c8486413d59e21fd296e06590cc0b5b559107878397c6922",
+  "training_csv_sha256": "0d6e9573094132879ee4c22973bb44782cf7e1514212a81c03042d14ced6d56f",
+  "validation_csv_sha256": "41cd237450d7a260841550de33ab3369fe79e385f73110529561868dc6bf82f9",
+  "feature_columns": [
+    "method",
+    "N",
+    "log_N",
+    "N_inv",
+    "n_factors",
+    "block_size",
+    "max_block_size",
+    "block_remainder",
+    "total_strata",
+    "log_strata",
+    "min_prevalence",
+    "max_prevalence",
+    "covariate_correlation",
+    "expected_min_stratum_size",
+    "preferred_probability",
+    "mti"
+  ],
+  "selected_models": {
+    "binary": {
+      "model": "LogisticRegression",
+      "criterion": "neg_brier_score",
+      "selection_source": "pooled grouped outer-CV predictions; no validation-based selection"
+    },
+    "multiclass": {
+      "model": "LogisticRegression",
+      "criterion": "neg_log_loss",
+      "selection_source": "pooled grouped outer-CV predictions; no validation-based selection"
+    },
+    "regression": {
+      "model": "RandomForest",
+      "criterion": "neg_mean_absolute_error",
+      "selection_source": "pooled grouped outer-CV predictions; no validation-based selection"
+    }
+  },
+  "validation": {
+    "binary": {
+      "all": {
+        "scenarios": 1560,
+        "accuracy": 0.9653846153846154,
+        "balanced_accuracy": 0.8559474867306558,
+        "macro_F1": 0.8320239282153539,
+        "log_loss": 0.08754553133164532,
+        "AUC": 0.9845639706322277,
+        "Brier": 0.026079179920073216
+      },
+      "N_interpolation": {
+        "scenarios": 1300,
+        "accuracy": 0.9584615384615385,
+        "balanced_accuracy": 0.8535750940814233,
+        "macro_F1": 0.8300653594771241,
+        "log_loss": 0.10502774776436254,
+        "AUC": 0.9812770192517029,
+        "Brier": 0.031294991892128754
+      },
+      "N_extrapolation_1200": {
+        "scenarios": 260,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_F1": 1.0,
+        "log_loss": 0.00013444916805930521,
+        "AUC": null,
+        "Brier": 1.2005979556668267e-07
+      },
+      "new_block_size_6": {
+        "scenarios": 360,
+        "accuracy": 0.9916666666666667,
+        "balanced_accuracy": 0.9956647398843931,
+        "macro_F1": 0.9494358350110024,
+        "log_loss": 0.06285094844176994,
+        "AUC": 1.0,
+        "Brier": 0.015943280112394837
+      },
+      "balanced_profile": {
+        "scenarios": 390,
+        "accuracy": 0.9564102564102565,
+        "balanced_accuracy": 0.8646922183507549,
+        "macro_F1": 0.8149027052681537,
+        "log_loss": 0.0952045122232155,
+        "AUC": 0.9865789134081817,
+        "Brier": 0.029099954530355795
+      },
+      "unseen_covariate_profiles": {
+        "scenarios": 1170,
+        "accuracy": 0.9683760683760684,
+        "balanced_accuracy": 0.8526265194740759,
+        "macro_F1": 0.8387703492377998,
+        "log_loss": 0.08499253770112193,
+        "AUC": 0.9841230463904738,
+        "Brier": 0.025072255049979026
+      },
+      "labels_clear_at_95pct_MC_interval": {
+        "scenarios": 1539,
+        "accuracy": 0.967511371020143,
+        "balanced_accuracy": 0.8615279313431264,
+        "macro_F1": 0.840812425526281,
+        "log_loss": 0.08399423357552328,
+        "AUC": 0.9851875252285929,
+        "Brier": 0.025126074253366663
+      }
+    },
+    "multiclass": {
+      "all": {
+        "scenarios": 1560,
+        "accuracy": 0.9294871794871795,
+        "balanced_accuracy": 0.670111921316797,
+        "macro_F1": 0.6708309550683879,
+        "log_loss": 0.1535916332474159
+      },
+      "N_interpolation": {
+        "scenarios": 1300,
+        "accuracy": 0.9153846153846154,
+        "balanced_accuracy": 0.6668512432870712,
+        "macro_F1": 0.6684715912722567,
+        "log_loss": 0.1842333690469393
+      },
+      "N_extrapolation_1200": {
+        "scenarios": 260,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "macro_F1": 1.0,
+        "log_loss": 0.0003829542497987254
+      },
+      "new_block_size_6": {
+        "scenarios": 360,
+        "accuracy": 0.9361111111111111,
+        "balanced_accuracy": 0.557738632941885,
+        "macro_F1": 0.5318092946307716,
+        "log_loss": 0.1378703919014057
+      },
+      "balanced_profile": {
+        "scenarios": 390,
+        "accuracy": 0.9256410256410257,
+        "balanced_accuracy": 0.7261388482318716,
+        "macro_F1": 0.7440774250857851,
+        "log_loss": 0.16719975131322312
+      },
+      "unseen_covariate_profiles": {
+        "scenarios": 1170,
+        "accuracy": 0.9307692307692308,
+        "balanced_accuracy": 0.629571451939873,
+        "macro_F1": 0.6064741083235817,
+        "log_loss": 0.1490555938921468
+      }
+    },
+    "regression": {
+      "all": {
+        "scenarios": 1560,
+        "R2": 0.8989233103352631,
+        "MAE": 0.015148292307692301,
+        "RMSE": 0.03637084071700211
+      },
+      "N_interpolation": {
+        "scenarios": 1300,
+        "R2": 0.8966319955938398,
+        "MAE": 0.01801384153846153,
+        "RMSE": 0.039786351605196314
+      },
+      "N_extrapolation_1200": {
+        "scenarios": 260,
+        "R2": -1325.9305643033483,
+        "MAE": 0.0008205461538461532,
+        "RMSE": 0.004717992847354928
+      },
+      "new_block_size_6": {
+        "scenarios": 360,
+        "R2": 0.9128810508837804,
+        "MAE": 0.01141002222222222,
+        "RMSE": 0.027518703113014287
+      },
+      "balanced_profile": {
+        "scenarios": 390,
+        "R2": 0.9268629437764221,
+        "MAE": 0.013330153846153839,
+        "RMSE": 0.0339244497870466
+      },
+      "unseen_covariate_profiles": {
+        "scenarios": 1170,
+        "R2": 0.8868296834036671,
+        "MAE": 0.015754338461538453,
+        "RMSE": 0.03715052231347633
+      }
+    }
+  },
+  "exact_probability_baseline": {
+    "scenarios": 1080,
+    "coverage_fraction": 0.6923076923076923,
+    "R2": 0.9990219755967951,
+    "MAE": 0.0010515936227132028,
+    "RMSE": 0.0032841715438473957,
+    "ML_same_subset": {
+      "R2": 0.8899645384191619,
+      "MAE": 0.013167001851851845,
+      "RMSE": 0.03483512096375236
+    }
+  },
+  "training_scenarios": 2250,
+  "validation_scenarios": 1560,
+  "training_N": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    75,
+    100,
+    150,
+    200,
+    250,
+    300,
+    400,
+    500,
+    750,
+    1000
+  ],
+  "validation_N": [
+    15,
+    60,
+    125,
+    350,
+    650,
+    1200
+  ],
+  "training_ambiguous_binary_labels": 34,
+  "validation_ambiguous_binary_labels": 21,
+  "risk_definition": "P(abs(N_A-N_B)/N > 0.10)",
+  "high_risk_definition": "estimated risk > 0.30",
+  "severity_definition": "low <=0.10; moderate >0.10 to <=0.50; high >0.50",
+  "uncertainty_note": "Model point predictions are surrogates, without prediction intervals. Simulation validation is not clinical validation. Scenario metrics weight cells equally.",
+  "elapsed_seconds": 29.449316024780273
+}

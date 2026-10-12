@@ -1,0 +1,19 @@
+{
+  "Figure1_ImbalanceRisk": [
+    "Table1_PrimarySimulation.csv"
+  ],
+  "Figure2_BlocksAndTradeoffs": [
+    "Table2_TerminalBlockSensitivity.csv",
+    "Table1_PrimarySimulation.csv"
+  ],
+  "Figure3_StratificationRisk": [
+    "Table3_StratificationThresholds.csv"
+  ],
+  "Figure4_IndependentValidation": [
+    "ModelPredictions.csv",
+    "model_report.json"
+  ],
+  "Figure5_Inference": [
+    "inference_substudy.csv"
+  ]
+}

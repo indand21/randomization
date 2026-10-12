@@ -1,0 +1,83 @@
+{
+  "revision": "2026-10-12",
+  "master_seed": 42,
+  "train_N": [
+    10,
+    20,
+    30,
+    40,
+    50,
+    75,
+    100,
+    150,
+    200,
+    250,
+    300,
+    400,
+    500,
+    750,
+    1000
+  ],
+  "validation_N": [
+    15,
+    60,
+    125,
+    350,
+    650,
+    1200
+  ],
+  "n_factors": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "training_profiles": [
+    "balanced",
+    "skewed",
+    "correlated"
+  ],
+  "validation_profiles": [
+    "balanced",
+    "moderate_skew",
+    "high_correlation",
+    "rare"
+  ],
+  "training_block_sizes": [
+    4,
+    8
+  ],
+  "validation_block_sizes": [
+    4,
+    6,
+    8
+  ],
+  "training_iterations": 1000,
+  "primary_iterations": 5000,
+  "validation_iterations": 2000,
+  "inference_iterations": 5000,
+  "imbalance_thresholds": [
+    0.02,
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "binary_risk_threshold": 0.3,
+  "stratification_max_risk": 0.1,
+  "inference_N": [
+    30,
+    100,
+    250
+  ],
+  "inference_effect": 0.4,
+  "inference_profiles": [
+    "balanced",
+    "skewed",
+    "correlated"
+  ],
+  "inference_n_factors": 2,
+  "inference_block_size": 4,
+  "validation_description": "independent simulation with unseen sample sizes and unseen joint covariate and block settings; no clinical external validation"
+}
